@@ -1,6 +1,7 @@
 <html><head>
     <title>Evil Lair Coffee</title>
     <style>
+    
     body {background-color: black;}
     
     .center-screen {
@@ -10,15 +11,28 @@
       align-items: center;
       text-align: center;
       min-height: 100vh;
-      user-select: none;
-      -moz-user-select: none;
-      -khtml-user-select: none;
-      -webkit-user-select: none;
-      -o-user-select: none;
     }
 
     .rotate {
-      animation: rotation 8s infinite linear;
+        transform-origin: 52% 52%;
+        animation: rotation 8s infinite linear;
+      user-drag: none; 
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .shrink {
+        animation: shrinking 5s infinite linear alternate;
+        animation-timing-function: ease-in-out;
+      user-drag: none; 
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
     }
 
     @keyframes rotation {
@@ -26,15 +40,25 @@
         transform: rotate(0deg);
       }
       to {
-        transform: rotate(359deg);
+        transform: rotate(-359deg);
+      }
+    }
+
+    @keyframes shrinking {
+      from {
+        transform:scale(1);
+      }
+      to {
+        transform:scale(1.2);
       }
     }
     </style>
   </head>
   <body>
-     <div class="center-screen">
-    <img src="https://github.com/monksevilcoffee/monksevilcoffee.github.io/blob/main/dozehilz.png?raw=true" class="rotate" width="100">
+    <div class="center-screen">
+     <div class="shrink">
+        <img src="https://github.com/monksevilcoffee/monksevilcoffee.github.io/blob/main/dozehilz.png?raw=true" class="rotate" width="300">
+     </div>
     </div>
-  
 
 </body></html>
